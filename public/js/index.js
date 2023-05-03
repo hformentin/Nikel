@@ -1,4 +1,4 @@
-const myModal = new bootstrap.Modal ("#register-Modal");
+const myModal = new bootstrap.Modal ("#register-modal");
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
 
@@ -35,8 +35,8 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
 document.getElementById("create-form").addEventListener ("submit", function(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email-creater-input").value;
-    const password = document.getElementById("password-creater-input").value; 
+    const email = document.getElementById("email-create-input").value;
+    const password = document.getElementById("password-create-input").value; 
 
     console.log(email, password);
         if(email.length < 5) {
@@ -89,5 +89,9 @@ function getAccount(key) {
     }
 
     return ""; 
+}
+
+function saveAccount(data) {
+    localStorage.setItem(data.login, JSON.stringify(data));
 }
 
