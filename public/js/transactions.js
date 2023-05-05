@@ -1,4 +1,4 @@
-const myModal = new bootstrap.Modal ("#transaction-Modal");
+const myModal = new bootstrap.Modal ("#transaction-modal");
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
 
@@ -74,7 +74,7 @@ function getTransactions() {
 
             transactionsHtml += `
                 <tr>
-                    <th scope="row">${item.data}</th>
+                    <th scope="row">${item.date}</th>
                     <td>${item.value.toFixed(2)}</td>
                     <td>${type}</td>
                     <td>${item.description}</td>
